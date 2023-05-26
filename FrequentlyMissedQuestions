@@ -31,4 +31,8 @@ cat Dockerfile-mysql | grep ENTRYPOINT
 Solution: cat Dockerfile-wordpress - combine the contents of both ENTRYPOINT and CMD commands 
 
 
+6. What is the command run at startup when the ubuntu image is run?
+
+Solution: cat Dockerfile-ubuntu + inspect CMD command
+
 
