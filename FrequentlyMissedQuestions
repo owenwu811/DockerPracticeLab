@@ -1,0 +1,34 @@
+Frequently Missed Questions from KodeKloud Docker Lab - 5/25/23
+
+1. Delete all containers from host (you may have to stop both running and not running containers)
+
+Solution: 
+
+Docker stop $(docker ps -aq)
+
+Docker rm $(docker ps -aq)
+
+
+2. Given the port mapping, identify the hostports and container ports - 0.0.0.0:3456->3456/tcp, 0.0.0.0:38080->80/tcp
+
+Ports exposed by Host: 3456 and 38080
+Ports exposed by Container: 3456 and 80
+
+3. Run an instance of the kodekloud/simple-webapp image with a tag blue, and map port 8080 on the container to 38282 on the host
+
+Solution: docker run -p 38282:8080 kodekloud/simple-webapp:blue
+
+Incorrect: docker run -p 38282:8080 -t blue kodekloud/simple-webapp
+
+Explanation: image tags go behind the iamge name that comes last with a :
+
+4. What is the Entrypoint configured on the mysql image?
+
+cat Dockerfile-mysql | grep ENTRYPOINT
+
+5. What is the final command run at startup when the wordpress image is run. Consider both Entrypoint and CMD commands (read carefully - the anwser should be 2 commands even though the question asks "what is the final command").
+
+Solution: cat Dockerfile-wordpress - combine the contents of both ENTRYPOINT and CMD commands 
+
+
+
