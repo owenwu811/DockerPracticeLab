@@ -63,4 +63,11 @@ Solution:
 6. docker-compose up
 
 
+9. Run a mysql container named mysql-db using the mysql image. Set database password to db_pass123
+
+Solution: docker run -d --name mysql-db -e MYSQL_ROOT_PASSWORD=db_pass123 mysql
+
+Note: to find the MYSQL_ROOT_PASSWORD enviornment variable, go to hub.docker.com, search for MYSQL image, and it will be located somewhere on the page. detatched mode just means you can still run other commands without the container taking over the terminal - you are running the container detatched, in the background. 
+
+
 
