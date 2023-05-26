@@ -103,6 +103,14 @@ Note: Registry server is exposed on port 5000 in the image.
 
 Solution: docker run -d -p 5000:5000 --restart=always --name my-registry registry:2
 
+15. Now its time to push some images to our registry server. Let's push two images for now .i.e. nginx:latest and httpd:latest. Don't forget to pull them first. To check the list of images pushed , use curl -X GET localhost:5000/v2/_catalog
+
+
+Solution:
+- Docker pull nginx:latest
+- Docker image tag nginx:latest localhost:5000/nginx:latest
+- Docker push localhost:5000/nginx:latest
+
 
 
 
