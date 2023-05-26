@@ -69,5 +69,13 @@ Solution: docker run -d --name mysql-db -e MYSQL_ROOT_PASSWORD=db_pass123 mysql
 
 Note: to find the MYSQL_ROOT_PASSWORD enviornment variable, go to hub.docker.com, search for MYSQL image, and it will be located somewhere on the page. detatched mode just means you can still run other commands without the container taking over the terminal - you are running the container detatched, in the background. 
 
+10. Explore the current setup, and identify the number of networks that exist on this system.
+
+Solution: docker network ls
+
+Incorrect: docker info
+
+
+
 
 
