@@ -83,6 +83,19 @@ Solution: docker run --name alpine-2 --network=none alpine
 
 Solution: docker network create --driver bridge --subnet 182.18.0.1/24 --gateway 182.18.0.1 wp-mysql-network 
 
+13. Deploy a web application named webapp using the kodekloud/simple-webapp-mysql image. Expose the port to 38080 on the host.
+
+The application makes use of two environment variable:
+1: DB_Host with the value mysql-db. 
+2: DB_Password with the value db_pass123.
+Make sure to attach it to the newly created network called wp-mysql-network.
+
+Also make sure to link the MySQL and the webapp container.
+
+Solution: docker run --network=wp-mysql-network -e DB_Host=mysql-db -e DB_Password=db_pass123 -p 38080:8080 --name webapp --link mysql-db:mysql-db -d kodekloud/simple-webapp-mysql
+
+note that link 38080 to host means 38080L:8080 as host is 8080. Also, remember to use --link mysql-db:mysql-db. 
+
 
 
 
