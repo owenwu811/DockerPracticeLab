@@ -111,6 +111,10 @@ Solution:
 - Docker image tag nginx:latest localhost:5000/nginx:latest
 - Docker push localhost:5000/nginx:latest
 
+16. How to remove all dangling images that we have locally?
+
+Solution: docker image prune -a 
+
 
 
 
