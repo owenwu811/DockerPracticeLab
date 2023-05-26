@@ -75,6 +75,11 @@ Solution: docker network ls
 
 Incorrect: docker info
 
+11. Run a container named alpine-2 using the alpine image and attach it to the none network.
+
+Solution: docker run --name alpine-2 --network=none alpine
+
+
 
 
 
