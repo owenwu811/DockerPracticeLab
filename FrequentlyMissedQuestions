@@ -11,6 +11,7 @@ Docker rm $(docker ps -aq)
 
 2. Given the port mapping, identify the hostports and container ports - 0.0.0.0:3456->3456/tcp, 0.0.0.0:38080->80/tcp
 
+host:container is the ordering
 Ports exposed by Host: 3456 and 38080
 Ports exposed by Container: 3456 and 80
 
