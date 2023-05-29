@@ -8,6 +8,7 @@ Docker stop $(docker ps -aq)
 
 Docker rm $(docker ps -aq)
 
+Explanation: -aq lists all container IDs and passes them to Docker stop command.
 
 2. Given the port mapping, identify the hostports and container ports - 0.0.0.0:3456->3456/tcp, 0.0.0.0:38080->80/tcp
 
