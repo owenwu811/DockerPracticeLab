@@ -18,9 +18,9 @@ Ports exposed by Container: 3456 and 80
 
 3. Run an instance of the kodekloud/simple-webapp image with a tag blue, and map port 8080 on the container to 38282 on the host
 
-Solution: docker run -p 38282:8080 kodekloud/simple-webapp:blue
+Solution: docker run -d -p 38282:8080 kodekloud/simple-webapp:blue
 
-Incorrect: docker run -p 38282:8080 -t blue kodekloud/simple-webapp
+Incorrect: docker run -d -p 38282:8080 -t blue kodekloud/simple-webapp
 
 Explanation: image tags go behind the iamge name that comes last with a :
 
